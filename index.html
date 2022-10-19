@@ -31,6 +31,55 @@
                 width: 50%;
             }
 
+            .menu-desktop ul li{
+                display: inline-block;
+                margin: 8px 10px;
+
+            }
+
+            .menu-desktop ul li a{
+                color: white;
+                text-decoration: none;
+            }
+
+            .menu-mobile{display: none; text-align: right; width: 50%;}
+
+            .menu-mobile svg{
+                cursor: pointer;
+                color: white;
+                font-size: 19px;
+            }
+
+            .menu-mobile ul{
+                opacity: 0;
+                transition: 1s;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 60px;
+                text-align: center;
+            }
+
+            .show-menu{
+                opacity: 1;
+            }
+
+            .menu-mobile ul li a{
+                color: #5e3ea1;
+                text-decoration: none;
+                font-size: 17px;
+                padding: 8px 0;
+                display: block;
+            }
+
+            @media screen and (max-width: 760px){
+                .menu-mobile{display: block;}
+                /*.menu-mobile ul{display: none;}*/ 
+                .menu-desktop{
+                    display: none;
+                }
+            }
+
         </style>
     </head>
 
@@ -61,5 +110,8 @@
         </header>
 
         <script src="all.min.js"></script>
+        <script>
+            var menuBar = document.querySelector('.menu-mobile i')
+        </script>
     </body>
 </html>
